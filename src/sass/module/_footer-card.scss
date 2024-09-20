@@ -1,0 +1,101 @@
+@use "global" as *;
+
+.footer-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    min-height: 100%;
+    padding: rem(18.95) rem(15.82) rem(14.21) rem(30);
+    background-color: $indigo;
+    position: relative;
+}
+
+.footer-card__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    height: 100%;
+    font-weight: $regular;
+    letter-spacing: 0.01em;
+}
+
+.footer-card__list{
+    text-align: left;
+    display: flex;
+    font-size: rem(13.88);
+    padding-bottom: rem(5);
+}
+
+.footer-card__list--font{
+    font-size: rem(12);
+}
+
+.footer-card__list + .footer-card__list {
+    margin-top: rem(7.17);
+}
+
+.footer-card__list dt {
+    width: 18%;
+    display: flex;
+}
+
+.footer-card__list dd {
+    width: 77%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    display: flex;
+    line-height: 1.5;
+
+}
+
+.footer-card__list a {
+    transition: 0.3s;
+    display: inline;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.footer-card__list a:hover {
+    opacity: 0.3;
+}
+
+.footer-card__list-margin a:hover {
+    text-decoration: underline; /* リンクにホバーしたときの下線 */
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+
+
+
+.footer-card__bottom {
+    display: flex;
+    margin-top: rem(10);
+    margin-left: auto;
+    align-items: top;
+}
+
+.footer-card__text {
+    font-size: rem(12.34);
+    background: $gold;                /* グラデーションを背景に設定 */
+    -webkit-background-clip: text;    /* 背景をテキストのみに適用（Webkit系ブラウザ用） */
+    -webkit-text-fill-color: transparent; /* テキストの塗りを透明にする（Webkit系ブラウザ用） */
+    background-clip: text;            /* 背景をテキストのみに適用（標準ブラウザ用） */
+    text-fill-color: transparent;     /* テキストの塗りを透明にする（標準ブラウザ用） */
+    @include mq(md) {
+        font-size: rem(13.05);
+    }
+}
+
+.footer-card__bottom img {
+    width: rem(28);
+    height: rem(28);
+    margin-left: rem(6);
+}

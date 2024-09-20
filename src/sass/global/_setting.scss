@@ -2,8 +2,10 @@
 
 // インナー幅設定
 // コンテンツのインナー幅（最も共通の幅が多い部分）
-$inner: 1100px;
+$inner: 1200px;
 // ※キュンパス幅ではなくインナーの幅を指す
+
+$max-width:500px;
 
 // 余白
 $padding-pc: 25px;
@@ -13,17 +15,16 @@ $padding-sp: 20px;
 // フォント設定
 ////////////////////
 
-$base-font-family: "";
+$base-font-family: "Shippori Mincho B1", system-ui;
 $second-font-family: "";
 // ※検証ツールでしっかり反映されているか確認する
 
-body {
-  font-family: $base-font-family;
-}
 
 // フォントウェイト
 $regular: 300;
 $normal: 400;
+$medium:500;
+$semiBold:600;
 $bold: 700;
 
 ////////////////////
@@ -33,3 +34,31 @@ $bold: 700;
 //色指定（共通性のあるものは出来る限り指定すると良い）
 $black: #111;
 $white: #fff;
+$indigo:#152137;
+$blue:#1D6397;
+
+$gold: linear-gradient(
+    to right, /* グラデーションの方向を右に指定 */
+    rgba(219, 171, 0, 1) 0%,        /* #DBAB00, 100%透明度 (不透明) */
+    rgba(242, 209, 94, 0.82) 28%,   /* #F2D15E, 82%透明度 */
+    rgba(255, 231, 148, 1) 50%,     /* #FFE794, 100%透明度 (不透明) */
+    rgba(242, 209, 94, 1) 73%,      /* #F2D15E, 100%透明度 (不透明) */
+    rgba(219, 171, 0, 1) 100%       /* #DBAB00, 100%透明度 (不透明) */
+);
+
+
+$silver: linear-gradient(
+    to right, /* グラデーションの方向を指定（右方向） */
+    rgba(204, 204, 204, 1) 0%,      /* #CCCCCC, 100%透明度 (不透明) */
+    rgba(233, 233, 233, 0.82) 28%,  /* #E9E9E9, 82%透明度 */
+    rgba(255, 255, 255, 1) 50%,     /* #FFFFFF, 100%透明度 (不透明) */
+    rgba(233, 233, 233, 1) 73%,     /* #E9E9E9, 100%透明度 (不透明) */
+    rgba(207, 207, 207, 1) 100%     /* #CFCFCF, 100%透明度 (不透明) */
+);
+
+
+
+
+body {
+  font-family: $base-font-family;
+}
