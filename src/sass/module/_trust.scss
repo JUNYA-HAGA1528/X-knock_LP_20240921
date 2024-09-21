@@ -1,0 +1,153 @@
+@use "global" as *;
+
+.trust{
+    text-align: center;
+}
+
+
+.trust__subtitle{
+    background: $blue-gradation;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: rem(18);
+    font-weight: 900;
+    line-height: calc(74/18);
+    margin-top: rem(54);
+    position: relative;
+    display: inline-block;
+    @include mq(md) {
+        margin-top: rem(61);
+        font-size: rem(28);
+        line-height: calc(74/28);
+    }
+}
+
+.trust__subtitle::before,
+.trust__subtitle::after {
+    content: "";
+    position: absolute;
+    top: 47%;
+    width: rem(100);
+    height: rem(1);
+    background: linear-gradient(
+        to right,   /* グラデーションの方向を右に指定 */
+        #363795 0%, /* 濃い青 (#363795), 0%位置 */
+        #009BFF 48%,/* 明るい青 (#009BFF), 48%位置 */
+        #363795 100%/* 濃い青 (#363795), 100%位置 */
+    );
+    @include mq(md) {
+        top: 51%;
+    }
+}
+
+.trust__subtitle::before {
+    left: -130%;
+    @include mq(md) {
+        left: -60%;
+    }
+}
+
+.trust__subtitle::after {
+    right: -130%;
+    @include mq(md) {
+        right: -60%;
+    }
+}
+
+.trust__title{
+    max-width: $max-width;
+    margin: auto;
+    @include mq(md) {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.trust__title-img{
+    @include mq(md) {
+        margin-top: rem(16);
+    }
+}
+
+
+.trust__sentence{
+    max-width: $max-width;
+    margin: rem(60) auto 0;
+    padding: 0 rem(25);
+    @include mq(md) {
+        margin: rem(83.59) auto 0;
+        max-width: rem(1230);
+    }
+}
+
+.trust__text{
+    color: #333;
+    font-size: rem(16);
+    font-weight: $medium;
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(20);
+        line-height: 2;
+    }
+}
+
+.trust__text-color{
+    color: #1D6397;
+    font-weight: $semiBold;
+    @include mq(md) {
+        font-weight: $medium;
+    }
+}
+
+.trust__text + .trust__text{
+    margin-top: rem(13);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}
+
+.trust__card{
+    margin-top: rem(60.56);
+    @include mq(md) {
+        margin-top: rem(120);
+    }
+}
+
+.trust__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(1262);
+    }
+}
+
+.trust__content{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(1230);
+    }
+}
+
+.trust__wrapper {
+    overflow-x: scroll;
+    width: calc(100% + rem(25));  // 右側のパディングのみ補正
+    margin: rem(60.56) auto auto 0; // 左側のパディングはそのまま
+    @include mq(md) {
+        width: 100%;
+        margin: rem(80) auto auto auto;
+    }
+}
+
+.trust__img {
+    width: rem(772);
+    height: rem(675);
+    @include mq(md) {
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.trust-cards{
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.trust-cards__item{
+    @include mq(md){
+        max-width: calc(33.3333% - 1.125rem * 2 / 3 );
+        width: 100%;
+    }
+}
+
+.trust-cards__item + .trust-cards__item{
+    margin-top: rem(30);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(18);
+    }
+}

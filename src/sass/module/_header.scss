@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.header{
+    background-color: #000;
+}
+
+.header__inner{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 rem(15);
+    @include mq(md){
+        padding-left: rem(80);
+        padding-right: rem(90);
+    }
+}
+
+.header__logo {
+    width:rem(175) ;
+    height: rem(40.35);
+    position: relative;/* z-indexをきかせるため */
+    z-index: 9999;
+    @include mq(md){
+        width: rem(373);
+        height: rem(86);
+    }
+}

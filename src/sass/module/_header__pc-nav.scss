@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.header__pc-nav {
+	height: inherit;
+}
+
+.pc-nav {
+	color: $white;
+}
+
+.pc-nav__list {
+    height: inherit;
+	display: flex;
+}
+
+.pc-nav__item {
+	height: inherit;
+}
+
+.pc-nav__item a {
+    height: inherit;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	padding:0 min(2.75vw, 80px);
+}
+
+.pc-nav__item.pc-nav__item--faq {
+	text-transform: uppercase;
+}
+
+.pc-nav__item a:hover {
+	opacity: 1;
+}
+
+.pc-nav__wrapper {
+	position: relative;
+    text-align: center;
+}
+
+.pc-nav__wrapper::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: rem(-10);
+	background-color: $white;
+	width: 100%;
+	height: rem(1);
+	transform: scale(0, 1); 
+	transform-origin: center top;
+	transition: transform 0.3s;
+}
+
+.pc-nav__item a:hover .pc-nav__wrapper::after {
+    transform: scale(1, 1);
+}
+
+.pc-nav__en {
+	display: block;
+	font-size: rem(16);
+    font-weight: $semiBold;
+	letter-spacing: 0.06em;
+	line-height: 1;
+	background: $gold;                /* グラデーションを背景に設定 */
+    -webkit-background-clip: text;    /* 背景をテキストのみに適用（Webkit系ブラウザ用） */
+    -webkit-text-fill-color: transparent; /* テキストの塗りを透明にする（Webkit系ブラウザ用） */
+    background-clip: text;            /* 背景をテキストのみに適用（標準ブラウザ用） */
+    text-fill-color: transparent;     /* テキストの塗りを透明にする（標準ブラウザ用） */
+}
+
+.pc-nav__en::first-letter {
+	text-transform: capitalize;
+}
+
+.pc-nav__ja {
+	display: block;
+	font-size: rem(20);
+    font-weight: $semiBold;
+	margin-top: rem(5);
+    line-height: calc(15/10);
+}
