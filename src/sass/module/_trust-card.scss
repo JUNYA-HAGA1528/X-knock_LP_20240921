@@ -64,7 +64,7 @@
 
 .trust-card__wrapper{
     margin-top: rem(7.69);
-    padding: 0 rem(16);
+    padding: 0 rem(13.88);
     @include mq(md) {
         margin-top: rem(10);
     }
@@ -103,6 +103,10 @@
         font-size: rem(22);
         line-height: calc(40/22);
     }
+}
+
+.trust-card__wrapper-title--letter{
+    letter-spacing: -0.06em;
 }
 
 .trust-card__wrapper-text{
