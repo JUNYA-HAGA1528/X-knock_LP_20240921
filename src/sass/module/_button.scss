@@ -18,6 +18,18 @@
     margin-top: rem(0);
 }
 
+.button__text{
+    color: $indigo;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(40/16);
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+
+
 
 
 /*ボタン（藍色）*/
@@ -83,4 +95,68 @@
 
 .button__item--trust span::after {
 	background-image: url(../images/common/button-icon-black.png) !important;
+}
+
+
+
+
+
+
+
+
+
+
+/*ボタン（case）*/
+.button__item--case  {
+    position: relative;
+    background-color: $indigo;
+    color: $white;
+    width: rem(284);
+    height: rem(64);
+    font-size: rem(18);
+    line-height: calc(34.7/18);
+    font-weight: $bold;
+    letter-spacing: 0.04em;
+    padding-right: rem(22);
+    z-index: 1;
+    transition: 0.4s;
+    overflow: hidden;
+    border: solid 2px $white;
+    @include mq(md) {
+        width: rem(413);
+        height: rem(65);
+        font-size: rem(18);
+        line-height: calc(40/18);
+        font-weight: $bold;
+        padding-right: rem(22);    
+    }
+}
+
+.button__item--case span::after {
+	background-image: url(../images/common/button-icon-white.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 51%;
+    right: rem(16);
+    width: rem(14);
+	height: rem(14);
+	transform: translateY(-50%);
+	transition: 0.4s background-color;
+    @include mq(md) {
+        width: rem(17);
+        height: rem(17);
+    }
+}
+
+.button__item--case:hover{
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.button__item--sp{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }

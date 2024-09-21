@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.recommend{
+    text-align: center;
+    @include mq(md) {
+        background-color: none;
+    }
+}
+
+.recommend__container{
+    display: flex;
+    justify-content: center;
+    max-width: $max-width;
+    margin: auto;
+    @include mq(md) {
+        max-width: rem(1440);
+    }
+}
+
+.recommend__content{
+    width: 100%;
+    @include mq(md){
+        width: 86.34%;
+        max-width: rem(1098);
+    }
+}
+
+.recommend__case{
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: rem(120);
+    }
+}
+
+.recommend__aside{
+    width: 100%;
+    background-color: #fff;
+    @include mq(md){
+        width: 26.56%;
+    }
+}

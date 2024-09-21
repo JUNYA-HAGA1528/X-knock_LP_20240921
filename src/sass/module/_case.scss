@@ -1,36 +1,271 @@
 @use "global" as *;
 
-.case{
-    text-align: center;
+.case__title{
+    width: rem(380);
+    height: rem(109);
     @include mq(md) {
-        background-color: none;
+        width: rem(836);
+        height: rem(105);      
     }
 }
 
-.case__container{
-    display: flex;
-    justify-content: center;
+.case__inner{
     max-width: $max-width;
     margin: auto;
+    padding: 0 rem(25);
     @include mq(md) {
-        max-width: rem(1440);
+        max-width: rem(948);
     }
 }
 
-.case__content{
+.case__subtitle{
+    margin-top: rem(37);
+    text-align: left;
+    font-family: $second-font-family;
+    font-size: rem(48);
+    font-weight: $regular;
+    line-height: calc(80/48);
+    text-transform: capitalize;
+    color: rgba(21, 33, 55, 0.5); /* 半透明の文字色 */
+    @include mq(md) {
+        margin-top: rem(8);
+        font-size: rem(64);
+        line-height: calc(80/64);
+    }
+}
+
+.case__list{
+    margin-top: rem(71);
+}
+
+.case__item{
+    display: flex;
+    align-items: flex-end;
+}
+
+.case__item--reverse{
+    flex-direction: row-reverse;
+}
+
+.case__item + .case__item{
+    margin-top: rem(95);
+}
+
+.case__wrapper{
     width: 100%;
-    background-color: $white;
-    padding: rem(80) 0 rem(120) ;
-    @include mq(md){
-        width: 86.34%;
-        max-width: rem(1098);
+    border: solid 1px $indigo;
+    position:relative ;
+    @include mq(md) {
+        width: 88.9%;
+    }
+}
+
+.case_number{
+    position: absolute;
+    top: rem(-38); /* 要素を case__wrapper の上に配置 */
+    left: 50%; /* 左端から50%の位置に配置 */
+    transform: translateX(-50%); /* 左に50%移動し、左右中央に揃える */
+    width: rem(150);
+    height: rem(50);
+    @include mq(md) {
+        width: rem(210);
+        height: rem(70);    
+        top: -10%;
+        left: 50%; /* メディアクエリ内でも中央揃え */
+        transform: translateX(-50%); /* メディアクエリ内でも左右中央に揃える */
+    }
+}
+
+.case_number--second{
+    top: rem(-35); /* 要素を case__wrapper の上に配置 */
+    @include mq(md) {
+        top: -10%;
+    }
+}
+
+.case_number--tihrd{
+    top: rem(-34); /* 要素を case__wrapper の上に配置 */
+    @include mq(md) {
+        top: -9%;
+        left: 50%; /* メディアクエリ内でも中央揃え */
+        transform: translateX(-50%); /* メディアクエリ内でも左右中央に揃える */
+    }
+}
+
+.case__sell{
+    color: $indigo;
+    font-size: rem(20);
+    font-weight: $medium;
+    line-height: calc(34.2/20);
+    margin-top: rem(22.8);
+    position: relative;
+    display: inline-block;
+    @include mq(md) {
+        margin-top: rem(36);
+        font-size: rem(32);
+        line-height: calc(60/28);
+        letter-spacing: 0.04em;
+    }
+}
+
+.case__sell::before,
+.case__sell::after {
+    content: "";
+    position: absolute;
+    top: 47%;
+    width: rem(60);
+    height: rem(1);
+    background-color: $indigo;
+    @include mq(md) {
+        top: 51%;
+        width: rem(170);
+    }
+}
+
+.case__sell::before {
+    left: -44%;
+    @include mq(md) {
+        left: -70%;
+    }
+}
+
+.case__sell::after {
+    right: -44%;
+    @include mq(md) {
+        right: -70%;
+    }
+}
+
+.case__sell--second::before,
+.case__sell--second::after {
+    top: 47%;
+    width: rem(30);
+    @include mq(md) {
+        top: 51%;
+        width: rem(104);
+    }
+}
+
+.case__sell--second::before {
+    left: -15%;
+    @include mq(md) {
+        left: -33%;
+    }
+}
+
+.case__sell--second::after {
+    right: -15%;
+    @include mq(md) {
+        right: -33%;
+    }
+}
+
+.case__sell--third::before,
+.case__sell--third::after {
+    top: 47%;
+    width: rem(60);
+    @include mq(md) {
+        top: 51%;
+        width: rem(104);
+    }
+}
+
+.case__sell--third::before {
+    left: -35%;
+    @include mq(md) {
+        left: -42%;
+    }
+}
+
+.case__sell--third::after {
+    right: -35%;
+    @include mq(md) {
+        right: -42%;
     }
 }
 
 
-.case__aside{
+.case__img{
+    width: rem(244);
+    height: rem(114);
+    margin: rem(20) auto 0;
+    @include mq(md) {
+        width: rem(357);
+        height: rem(166);
+        margin: rem(30) auto rem(-68);
+    }
+}
+
+.case__img img {
+    aspect-ratio: 244/144;
     width: 100%;
-    @include mq(md){
-        width: 26.56%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 357/166;
+    }
+}
+
+.case__sentence{
+    text-align: left;
+    background-color: $indigo;
+    color: $white;
+    margin-top: rem(26);
+    padding: rem(40) rem(21) rem(0);
+    @include mq(md) {
+        margin-top: rem(0);
+        padding: rem(110) rem(120) rem(60);
+    }
+}
+
+.case__text{
+    max-width: rem(556);
+    margin: 0 auto;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(28/16);
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        line-height: calc(32/16);
+    }
+}
+
+.case__text-color{
+    background: $gold;                /* グラデーションを背景に設定 */
+    -webkit-background-clip: text;    /* 背景をテキストのみに適用（Webkit系ブラウザ用） */
+    -webkit-text-fill-color: transparent; /* テキストの塗りを透明にする（Webkit系ブラウザ用） */
+    background-clip: text;            /* 背景をテキストのみに適用（標準ブラウザ用） */
+    text-fill-color: transparent;     /* テキストの塗りを透明にする（標準ブラウザ用） */
+}
+
+
+
+.case__side-text-pc{
+    text-align: left;
+    font-family: $second-font-family;
+    font-size: rem(48);
+    font-weight: $regular;
+    color: rgba(21, 33, 55, 0.5); /* 半透明の文字色 */
+    margin-bottom: rem(35);
+    font-size: rem(64);
+    writing-mode: vertical-rl; /* 縦書きにする */
+}
+
+
+.case__side-text-sp{
+    text-align: right;
+    font-family: $second-font-family;
+    font-size: rem(48);
+    font-weight: $regular;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: rem(-10);
+}
+
+.case__buttons{
+    max-width: rem(284);
+    margin: rem(60) auto 0;
+    @include mq(md) {
+        max-width: rem(413);
+        margin: rem(80) auto 0;
     }
 }

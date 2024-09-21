@@ -157,7 +157,8 @@
 }
 
 .upsides__text {
-    border-bottom: 1px dotted #152137;
+    border-bottom: 1px dotted $indigo;
+    color: $indigo;
     padding: rem(8) 0;
     font-size: rem(16);
     font-weight: $semiBold;
