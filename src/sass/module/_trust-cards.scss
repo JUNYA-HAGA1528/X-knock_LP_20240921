@@ -9,15 +9,15 @@
 
 .trust-cards__item{
     @include mq(md){
-        max-width: calc(33.3333% - 1.125rem * 2 / 3 );
+        max-width: calc(33.3333% - 0.375rem * 2 / 3 );
         width: 100%;
     }
 }
 
 .trust-cards__item + .trust-cards__item{
-    margin-top: rem(30);
+    margin-top: rem(40);
     @include mq(md){
         margin-top: 0;
-        margin-left: rem(18);
+        margin-left: rem(6);
     }
 }

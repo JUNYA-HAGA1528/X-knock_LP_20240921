@@ -1,5 +1,121 @@
 @use "global" as *;
 
 .trust-card{
-    background-color: red;
+    position: relative;
+}
+
+.trust-card__content{
+    width: 91.5%;
+    background-color: $blue;
+    margin: 0 auto;
+    padding: rem(8.68) 0 rem(52.04);
+    @include mq(md) {
+        padding: rem(10) 0 rem(60);
+    }
+}
+
+
+.trust-card__head{
+    width: 94.4%;
+    margin: 0 auto;
+}
+
+.trust-card__title{
+    position: absolute;
+    top: 13%;
+    left: 0;
+    right: 0;
+}
+
+.trust-card__company{
+    margin: rem(-46) auto 0;
+    width: 98.7%;
+}
+
+
+
+
+
+.trust-card__source{
+    color: $white;
+    display: flex;
+    justify-content: center;
+    font-size: rem(9.54);
+    font-weight: $regular;
+    line-height: calc(26/9.54);
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(11);
+        line-height: calc(30/11);
+    }
+}
+
+.trust-card__source-text{
+    text-decoration: underline;
+}
+
+.trust-card__source-text a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+
+
+.trust-card__wrapper{
+    margin-top: rem(7.69);
+    padding: 0 rem(16);
+    @include mq(md) {
+        margin-top: rem(10);
+    }
+}
+
+.trust-card__wrapper,
+.trust-card__wrapper--position{
+    position: relative;
+}
+
+.trust-card__left{
+    width: rem(45);
+    height: rem(105);
+    position: absolute;
+    top: 40%;
+    left: 8.5%;
+}
+
+.trust-card__right{
+    width: rem(45);
+    height: rem(105);
+    position: absolute;
+    top: 40%;
+    right:8.5%;
+}
+
+.trust-card__wrapper-title{
+    background-color: $indigo;
+    color: $white;
+    font-size: rem(19.08);
+    font-weight: $medium;
+    line-height: calc(34.7/19.08);
+    letter-spacing: 0.04em;
+    padding: rem(12) 0;
+    @include mq(md) {
+        font-size: rem(22);
+        line-height: calc(40/22);
+    }
+}
+
+.trust-card__wrapper-text{
+    background-color: $white;
+    color: $blue;
+    font-size: rem(13.88);
+    font-weight: $bold;
+    line-height: calc(27.8/13.88);
+    letter-spacing: 0.04em;
+    padding: rem(25) 0;
+    @include mq(md) {
+        padding: rem(29) 0;
+        font-size: rem(16);
+        line-height: calc(32/16);
+    }
 }
