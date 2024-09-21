@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.case{
+    text-align: center;
+    @include mq(md) {
+        background-color: none;
+    }
+}
+
+.case__container{
+    display: flex;
+    justify-content: center;
+    max-width: $max-width;
+    margin: auto;
+    @include mq(md) {
+        max-width: rem(1440);
+    }
+}
+
+.case__content{
+    width: 100%;
+    background-color: $white;
+    padding: rem(80) 0 rem(120) ;
+    @include mq(md){
+        width: 86.34%;
+        max-width: rem(1098);
+    }
+}
+
+
+.case__aside{
+    width: 100%;
+    @include mq(md){
+        width: 26.56%;
+    }
+}

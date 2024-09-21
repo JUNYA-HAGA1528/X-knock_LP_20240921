@@ -35,6 +35,7 @@ $bold: 700;
 $white: #fff;
 $indigo:#152137;
 $blue:#1D6397;
+$black:#333;
 
 $gold: linear-gradient(
     to right, /* グラデーションの方向を右に指定 */
@@ -64,4 +65,5 @@ $blue-gradation: linear-gradient(
 
 body {
   font-family: $base-font-family;
+  background-color: #F3F3F3;
 }

@@ -1,0 +1,189 @@
+@use "global" as *;
+
+.upsides{
+    background-image: url('../images/common/upsides-bg-sp.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: rem(503) 0 rem(153);
+    @include mq(md) {
+        background-image: url('../images/common/upsides-bg.jpg');
+        padding: rem(110) 0 rem(140);
+    }
+}
+
+.upsides__bg{
+    position: relative;
+    max-width: rem(1180);
+    margin: 0 auto;
+}
+
+.upsides__human{
+    position: absolute;
+    top: -46.5%;
+    left: 50%; /* 親要素の左から50%の位置に配置 */
+    transform: translateX(-50%); /* 中央に寄せるために左に50%移動 */
+    width: rem(390);
+    height: rem(430);
+    @include mq(md) {
+        top: 11%;
+        left: 50%; /* 親要素の左から50%の位置に配置 */    
+        width: 100%;
+        height: rem(447);
+    }
+}
+
+.upsides__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: 1070px;
+    }
+}
+
+.upsides__list {
+    position: relative;
+    @include mq(md) {
+        display: flex;
+        justify-content: flex-end; /* 要素を右寄せにする */
+        margin-left: auto; /* これは不要かもしれませんが、特定のデザインで必要なら保持 */
+        gap: 0 rem(80); /* 単位の順番を修正 */
+    }
+}
+@media (max-width: 1200px) {
+    .upsides__list {
+        gap: 0 rem(40); /* 単位の順番を修正 */
+    }
+}
+
+
+.upsides__topText {
+    width: rem(323);
+    height: rem(80);
+    position: absolute;
+    top: -4%; /* 上からの位置を指定 */
+    left: 49%; /* 親要素の左から50%の位置に配置 */
+    transform: translateX(-50%); /* 中央に寄せるために左に50%移動 */
+    text-align: center; /* テキストを中央に揃える */
+    @include mq(md) {
+        top: -9%; /* 上からの位置を指定 */
+        left: 60%; /* 親要素の左から50%の位置に配置 */
+        width: rem(387);
+        height: rem(80);
+    }
+}
+
+.upsides__list--position{
+    position: relative;
+}
+
+.upsides__bottomText {
+    width: rem(382);
+    height: rem(80);
+    position: absolute;
+    bottom: -8%; /* 上からの位置を指定 */
+    left: 50%; /* 親要素の左から50%の位置に配置 */
+    transform: translateX(-50%); /* 中央に寄せるために左に50%移動 */
+    text-align: center; /* テキストを中央に揃える */
+    @include mq(md) {
+        left: 60%; /* 親要素の左から50%の位置に配置 */
+        bottom: -15%; /* 上からの位置を指定 */
+        width: rem(524);
+        height: rem(80);
+    }
+}
+
+.upsides__item {
+    width: 100%;
+    border: solid 1px $white;
+    padding: rem(10);
+    position: relative;
+    @include mq(md) {
+        display: flex;
+        flex-direction: column; /* 子要素を縦に並べる */
+        justify-content: space-between; /* 上下に要素を均等に配置 */
+        max-width: calc(40.2% - 5rem * 1 / 2);
+    }
+}
+
+.upsides__item + .upsides__item{
+    margin-top: rem(92.46);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}
+
+.upsides__content{
+    display: flex;
+    flex-direction: column; /* 子要素を縦に並べる */
+    background-color: $white;
+    flex-grow: 1; /* コンテンツの高さを均等に広げる */
+
+}
+
+.upsides__img{
+    width: 100%;
+}
+
+.upsides__img img {
+    aspect-ratio: 321/201;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 348/218;
+    }
+}
+
+.upsides__wrapper {
+    display: flex;
+    flex-direction: column; /* 子要素を縦に並べる */
+    flex-grow: 1; /* コンテンツの高さを均等に広げる */
+    padding: rem(18.49) rem(18.49) rem(48.08);
+    @include mq(md) {
+        padding: rem(20) rem(20) rem(52);
+    }
+}
+
+.upsides__sentence{
+    background-color: #F6F6F6;
+    padding: rem(25) rem(30);
+    flex-grow: 1; /* コンテンツの高さを均等に広げる */
+    @include mq(md) {
+        padding: rem(28) rem(33) rem(28) rem(32);
+    }
+}
+
+.upsides__text {
+    border-bottom: 1px dotted #152137;
+    padding: rem(8) 0;
+    font-size: rem(16);
+    font-weight: $semiBold;
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(17);
+    }
+}
+
+.upsides__text:last-child {
+    border-bottom: none; /* 最後の要素のボーダーを削除 */
+}
+
+
+
+.upsides__comment{
+    width: rem(247);
+    height: rem(54);
+    margin: 0 auto;
+    position: absolute;
+    bottom: -3%;
+    left: 0;
+    right: 0;
+    @include mq(md) {
+        bottom: -5%;
+        width: rem(267);
+        height: rem(59);
+    }
+}

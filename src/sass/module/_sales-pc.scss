@@ -99,6 +99,7 @@
     font-size: rem(16);
     font-weight: $medium;
     line-height: calc(32/16);
+    color: $black;
     @include mq(md) {
         letter-spacing: 0.04em;
     }
