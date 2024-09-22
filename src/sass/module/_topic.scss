@@ -76,6 +76,7 @@
 }
 
 .topic__title{
+    color: $indigo;
     font-size: rem(26);
     font-weight: $semiBold;
     line-height: calc(60/26);
@@ -109,6 +110,7 @@
 }
 
 .topic__text{
+    color: $indigo;
     text-align: left;
     font-size: rem(16);
     font-weight: $medium;

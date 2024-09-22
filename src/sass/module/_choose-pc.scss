@@ -1,12 +1,35 @@
 @use "global" as *;
 
+.choose-pc__inner{
+    max-width: rem(948);
+    margin: 0 auto;
+    padding: 0 rem(25);
+}
+
+.choose-pc__list{
+    margin-top: rem(83);
+}
+
+.choose-pc__list--margin{
+    margin-top: rem(100);
+}
+
+.choose-pc__item:not(:first-child) {
+    margin-top: rem(100);
+}
 
 
-
+.choose-pc__wrapper{
+    position: relative;
+}
 
 .choose-pc__img{
     width: 50%;
     margin-left: auto;
+}
+
+.choose-pc__img--second{
+    margin-left: 0;
 }
 
 .choose-pc__img img {
@@ -14,4 +37,190 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.choose-pc__bg{
+    position: absolute;
+    top: -6%;
+    left: -2.3%;
+    z-index: -1;
+    width: rem(1018);
+    height: rem(339);
+}
+
+.choose-pc__bg--second{
+    position: absolute;
+    top: -6%;
+    left: auto;
+    right: -2.3%;
+    z-index: -1;
+    width: rem(1018);
+    height: rem(339);
+}
+
+.choose-pc__bg img {
+    width: 100%;
+    height: 100%;
+}
+
+.choose-pc__sentence{
+    max-width: rem(818);
+    text-align: left;
+    margin-top: rem(60);
+    margin-left: auto;
+}
+
+.choose-pc__sentence--second{
+    margin-left: 0;
+}
+
+.choose-pc__text{
+    color: $indigo;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(28/16);
+    letter-spacing: 0.01em;
+}
+
+.choose-pc__text + .choose-pc__text{
+    margin-top: rem(29);
+}
+
+
+
+
+
+
+.choose-pc__topic-heading {
+    position: relative; /* 疑似要素が要素内で相対的に位置するように設定 */
+    padding-bottom: 10px; /* ボーダー部分のスペースを確保 */
+}
+
+.choose-pc__topic-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* 左から50%の位置に設定 */
+    transform: translateX(-50%); /* 要素の幅の50%だけ左にずらして完全に中央に */
+    bottom: 0;
+    width: rem(340); /* または任意の幅 */
+    height: 1px; /* ボーダーの高さ */
+    background: linear-gradient(
+        to right,
+        rgba(219, 171, 0, 1) 0%,       /* #DBAB00, 100%透明度 (不透明) */
+        rgba(242, 209, 94, 0.82) 28%,  /* #F2D15E, 82%透明度 */
+        rgba(255, 231, 148, 1) 50%,    /* #FFE794, 100%透明度 (不透明) */
+        rgba(242, 209, 94, 1) 73%,     /* #F2D15E, 100%透明度 (不透明) */
+        rgba(219, 171, 0, 1) 100%      /* #DBAB00, 100%透明度 (不透明) */
+    );
+    @include mq(md) {
+        width: rem(512); /* レスポンシブデザインに合わせた幅調整 */
+        left: 50%; /* メディアクエリ内でも中央に */
+        transform: translateX(-50%); /* メディアクエリ内でも左右中央に揃える */
+    }
+}
+
+
+.choose-pc__topic-head{
+    background: $gold;    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: rem(24);
+    font-weight: 900;
+    margin-top: rem(22.8);
+    position: relative;
+    display: inline-block;
+    text-transform: capitalize;
+    @include mq(md) {
+        margin-top: rem(100);
+        font-size: rem(18);
+    }
+}
+
+.choose-pc__topic-head::before,
+.choose-pc__topic-head::after {
+    content: "";
+    position: absolute;
+    top: 47%;
+    width: rem(95);
+    height: rem(1);
+    background: $gold;
+    @include mq(md) {
+        top: 51%;
+        width: rem(181);
+    }
+}
+
+.choose-pc__topic-head::before {
+    left: 151%;
+    @include mq(md) {
+        left: 193%;
+    }
+}
+
+.choose-pc__topic-head::after {
+    right: 162%;
+    @include mq(md) {
+        right: 193%;
+    }
+}
+
+.choose-pc__topic-title{
+    color: $indigo;
+    font-size: rem(26);
+    font-weight: $semiBold;
+    line-height: calc(60/26);
+    @include mq(md) {
+        font-size: rem(32);
+        line-height: calc(60/32);
+        letter-spacing: 0.04em;
+    }
+}
+
+.choose-pc__topic-title-color{
+    background: $gold;    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.choose-pc__topic-sentence{
+    background-image: url('../images/common/color-bg-sp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(77) rem(25) rem(173) rem(35);
+    margin-top: rem(-38);
+    @include mq(md) {
+        background-image: url('../images/common/color-bg.png');
+        background-size:  cover;
+        padding: rem(71) rem(100) rem(93);
+    }
+}
+
+.choose-pc__topic-text{
+    color: $indigo;
+    text-align: left;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(30/16);
+    @include mq(md) {
+        font-size: rem(18);
+        line-height: calc(36/18);
+        letter-spacing: 0.03em;
+    }
+}
+
+.choose-pc__topic-text-color{
+    color: #C18C33;
+    font-weight: 900;
+}
+
+.choose-pc__topic-buttons{
+    margin-top: rem(-10);
+    @include mq(md) {
+        margin-top: rem(-34);
+    }
 }
