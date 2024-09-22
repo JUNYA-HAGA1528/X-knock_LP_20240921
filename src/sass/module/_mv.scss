@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.mv{
+    padding: rem(126) 0 rem(87);
+    background-image: url('../images/common/mv-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.mv__inner{
+    max-width: rem(1440);
+    margin: 0 auto;
+    position: relative;
+}
+
+.mv__man{
+    position: absolute;
+    top: 10%;
+    left: -3%;
+    width: rem(356);
+    height: rem(685);
+}
+
+
+.mv__inner--position{
+    position: relative;
+}
+
+.mv__woman{
+    position: absolute;
+    top: 10%;
+    right: -3%;
+    width: rem(314);
+    height: rem(664);
+}
+
+.mv__recommendation{
+    width: rem(808);
+    height: rem(157);
+    margin: rem(9) auto 0;
+}

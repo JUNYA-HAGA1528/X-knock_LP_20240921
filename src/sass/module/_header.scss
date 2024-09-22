@@ -1,15 +1,26 @@
 @use "global" as *;
 
-.header{
-    background-color: #000;
+/* 初期状態のヘッダー */
+.header {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
+
+/* スクロール後のヘッダー */
+.header.scrolled {
+    background-color: red; /* スクロール後に赤に変更 */
+}
+
 
 .header__inner{
     height: inherit;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:  0 rem(15);
+    padding:  rem(20) rem(15) 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
     @include mq(md){
         padding-left: rem(80);
         padding-right: rem(90);
