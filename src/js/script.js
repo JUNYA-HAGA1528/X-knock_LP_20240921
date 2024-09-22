@@ -9,4 +9,9 @@ jQuery(document).ready(function ($) {
             header.removeClass('scrolled');
         }
     });
+
+    $('.header__logoLink').on('click', function(event) {
+        event.preventDefault(); // リンクのデフォルト動作を無効化
+        $('html, body').animate({ scrollTop: 0 }, 1000); // スムーズにトップへスクロール（500ms）
+    });
 });

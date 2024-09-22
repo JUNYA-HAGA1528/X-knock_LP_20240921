@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.scroll__inner{
+.scroll-pc__inner{
     max-width: $max-width;
     margin: auto;
     padding: 0 rem(25);
@@ -9,7 +9,7 @@
     }
 }
 
-.scroll__list{
+.scroll-pc__list{
     background-color: $white;
     margin-top: rem(-40);
     padding: rem(24) rem(62) rem(29);
@@ -22,9 +22,9 @@
     z-index: 100;
 }
 
-.scroll__area,
-.scroll__sell,
-.scroll__chart{
+.scroll-pc__area,
+.scroll-pc__sell,
+.scroll-pc__chart{
     width: rem(213);
     height: rem(213);
 }

@@ -17,7 +17,7 @@
     height: 60px; /* スクロール時のヘッダー高さ */
     transition: height 0.3s ease; /* スムーズな高さ変更 */
     @include mq(md) {
-        height: 80px; /* スクロール時のヘッダー高さ */
+        height: 86.5px; /* スクロール時のヘッダー高さ */
     }
 }
 
