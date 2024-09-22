@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.choose__title-img{
+    width: rem(365);
+    height: rem(109);
+    margin-left: auto;
+    @include mq(md) {
+        width: rem(723);
+        height: rem(112);
+    }
+}
+
+.choose__title-en{
+    margin-top: rem(10);
+    font-family: $second-font-family;
+    font-size: rem(48);
+    font-weight: $regular;
+    line-height: calc(80/48);
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(21, 33, 55, 0.5); /* 半透明の文字色 */
+    @include mq(md) {
+        margin-top: rem(8);
+        font-size: rem(64);
+        padding-right: rem(135);
+        text-align: right;
+    }
+}

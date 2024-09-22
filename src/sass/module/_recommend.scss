@@ -32,6 +32,35 @@
     }
 }
 
+.recommend__topic{
+    margin-top: rem(87.82);
+    @include mq(md) {
+        margin-top: rem(100);
+    }
+}
+
+.recommend__choose{
+    margin-top: rem(100);
+    @include mq(md) {
+        margin-top: rem(151);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .recommend__aside{
     width: 100%;
     background-color: #fff;
