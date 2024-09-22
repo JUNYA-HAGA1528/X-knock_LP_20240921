@@ -264,8 +264,8 @@
     position: relative;
     background: $silver;
     color: #333;
-    width: rem(284);
-    height: rem(64);
+    width: rem(328);
+    height: rem(74);
     font-size: rem(16);
     line-height: calc(34.7/15.61);
     font-weight: 900;
@@ -276,8 +276,6 @@
     border: solid 2px $white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     @include mq(md) {
-        width: rem(328);
-        height: rem(74);
         line-height: calc(40/16);
     }
 }
@@ -302,10 +300,12 @@
     background-clip: text;
     text-fill-color: transparent;
     font-size: rem(16);
-    font-weight: $medium;
+    font-weight: 900;
     line-height: calc(40/16);
     letter-spacing: 0.04em;
-
+    @include mq(md) {
+        font-weight: $medium;
+    }
 }
 
 
@@ -318,8 +318,8 @@
     position: relative;
     background: $white;
     color: $blue;
-    width: rem(284);
-    height: rem(64);
+    width: rem(328);
+    height: rem(74);
     font-size: rem(16);
     line-height: calc(34.7/15.61);
     font-weight: 900;
@@ -330,8 +330,6 @@
     border: solid 1px $blue;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     @include mq(md) {
-        width: rem(328);
-        height: rem(74);
         line-height: calc(40/16);
     }
 }
