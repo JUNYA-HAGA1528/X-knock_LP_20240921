@@ -1,2 +1,153 @@
 @use "global" as *;
 
+.choose-sp{
+    text-align: left;
+}
+
+.choose-sp__list--margin{
+    margin-top: rem(60);
+}
+
+.choose-sp__item:not(:first-child) {
+    margin-top: rem(60);
+}
+
+.choose-sp__title{
+    margin-top: rem(20);
+    display: inline-block;
+    background-color: $white;
+    color: $indigo;
+    font-size: rem(24);
+    font-weight: $medium;
+    letter-spacing: 0.01em;
+    padding: rem(9) rem(22) rem(8) rem(35);
+}
+
+.choose-sp__title--second{
+    margin-left: auto;
+    display: table;
+}
+
+.choose-sp__inner{
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 rem(35);
+}
+
+.choose-sp__sentence{
+    margin-top: rem(40);
+}
+
+.choose-sp__text{
+    color: $indigo;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(28/16);
+}
+
+.choose-sp__text + .choose-sp__text{
+    margin-top: rem(30);
+}
+
+
+
+
+
+.choose-sp__topic{
+    margin-top: rem(80);
+}
+
+.choose-sp__topic{
+    text-align: center;
+}
+
+.choose-sp__topic-heading {
+    position: relative; /* 疑似要素が要素内で相対的に位置するように設定 */
+    padding-bottom: 10px; /* ボーダー部分のスペースを確保 */
+}
+
+.choose-sp__topic-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* 左から50%の位置に設定 */
+    transform: translateX(-50%); /* 要素の幅の50%だけ左にずらして完全に中央に */
+    bottom: 0;
+    width: rem(340); /* または任意の幅 */
+    height: 1px; /* ボーダーの高さ */
+    background: linear-gradient(
+        to right,
+        rgba(219, 171, 0, 1) 0%,       /* #DBAB00, 100%透明度 (不透明) */
+        rgba(242, 209, 94, 0.82) 28%,  /* #F2D15E, 82%透明度 */
+        rgba(255, 231, 148, 1) 50%,    /* #FFE794, 100%透明度 (不透明) */
+        rgba(242, 209, 94, 1) 73%,     /* #F2D15E, 100%透明度 (不透明) */
+        rgba(219, 171, 0, 1) 100%      /* #DBAB00, 100%透明度 (不透明) */
+    );
+    @include mq(md) {
+        width: rem(512); /* レスポンシブデザインに合わせた幅調整 */
+        left: 50%; /* メディアクエリ内でも中央に */
+        transform: translateX(-50%); /* メディアクエリ内でも左右中央に揃える */
+    }
+}
+
+.choose-sp__topic-head{
+    background: $gold;    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: rem(24);
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.choose-sp__topic-head::before,
+.choose-sp__topic-head::after {
+    content: "";
+    position: absolute;
+    top: 47%;
+    width: rem(95);
+    height: rem(1);
+    background: $gold;
+}
+
+.choose-sp__topic-head::before {
+    left: 151%;
+}
+
+.choose-sp__topic-head::after {
+    right: 162%;
+}
+
+.choose-sp__topic-title{
+    color: $indigo;
+    font-size: rem(26);
+    font-weight: $semiBold;
+    line-height: calc(60/26);
+}
+
+.choose-sp__topic-title-color{
+    background: $gold;    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.choose-sp__topic-sentence{
+    background-image: url('../images/common/color-bg-sp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(77) rem(25) rem(60) rem(35);
+    margin-top: rem(-38);
+}
+
+.choose-sp__topic-text{
+    color: $indigo;
+    text-align: left;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(30/16);
+}
