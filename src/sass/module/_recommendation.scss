@@ -1,2 +1,250 @@
 @use "global" as *;
 
+.recommendation{
+    color: $black;
+}
+
+
+.recommendation__title-img{
+    width: 100%;
+    height: rem(189);
+    @include mq(md) {
+        width: 100%;
+        height: rem(189);
+    }
+}
+
+.recommendation__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(948);
+    }
+}
+
+.recommendation__list{
+    margin-top: rem(77.27);
+    @include mq(md) {
+        margin-top: rem(110);
+    }
+}
+
+.recommendation__item{
+    padding-bottom: rem(100);
+}
+
+.recommendation__head{
+    @include mq(md) {
+        display: flex;
+        gap: 0 rem(30);
+    }
+}
+
+.recommendation__head-img{
+    width: 100%;
+    @include mq(md) {
+        width: 53.76%;
+    }
+}
+
+.recommendation__head-source{
+    display: flex;
+    justify-content: center;
+    font-size: rem(9.54);
+    font-weight: $regular;
+    line-height: calc(26/9.54);
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(11);
+        line-height: calc(30/11);
+    }
+}
+
+.recommendation__head-source-text{
+    text-decoration: underline;
+}
+
+.recommendation__head-source-text a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.recommendation__head-sentence{
+    width: 100%;
+    position: relative;
+    @include mq(md) {
+        width: 44.32%;
+        margin-top: rem(125);
+    }
+}
+
+.recommendation__head-en{
+    position: absolute;
+    top: -14%;
+    left: 50%; /* 左から50% */
+    transform: translate(-50%, -50%); /* X軸方向に50%ずらして中央揃え */
+    font-family: $second-font-family;
+    font-size: rem(48);
+    font-weight: $regular;
+    line-height: calc(80/48);
+    text-transform: capitalize;
+    color: rgba(21, 33, 55, 0.5); /* 半透明の文字色 */
+    @include mq(md) {
+        font-size: rem(64);
+        margin: 0;
+    }
+}
+@media (max-width: 1300px) {
+    .recommendation__head-en {
+        font-size: rem(56);
+    }
+}
+
+
+.recommendation__head-subtitle{
+    font-size: rem(20);
+    font-weight: $semiBold;
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(28);
+    }
+}
+
+.recommendation__head-title{
+    font-size: rem(36);
+    font-weight: $semiBold;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    @include mq(md) {
+        font-size: rem(48);
+    }
+}
+
+.recommendation__textBox{
+    margin-top: rem(40);
+    
+}
+
+.recommendation__text{
+    text-align: left;
+    text-align: justify;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(28/16);
+    letter-spacing: 0.04em;
+}
+
+.recommendation__text + .recommendation__text{
+    margin-top: rem(30);
+}
+
+.recommendation__service{
+    margin-top: rem(40);
+}
+
+
+
+.recommendation__buttons{
+    display: flex;
+    gap: 0 rem(40);
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(60);
+    }
+}
+
+.recommendation__works{
+    width: rem(998);
+    height: rem(300);
+    margin: rem(80) auto 0;
+}
+
+
+
+
+
+
+.recommendation__review{
+    margin-top: rem(100);
+    background-color: $white;
+    padding: rem(37) rem(30) rem(61);
+}
+
+.recommendation__review-title{
+    width: rem(819);
+    height: rem(58);
+    margin: 0 auto;
+}
+
+.recommendation__review-list{
+    margin-top: rem(43.3);
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+        max-width: rem(630);
+        margin: rem(43.3) auto 0;
+    }
+}
+
+.recommendation__review-item{
+    @include mq(md){
+        max-width: calc(50% - 3.75rem * 1 / 2 );
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.recommendation__review-item + .recommendation__review-item{
+    margin-top: rem(20);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(60);
+    }
+}
+
+
+.recommendation__review-human{
+    width: rem(141);
+    height: rem(145);
+    margin: 0 auto;
+}
+
+.recommendation__review-text{
+    font-size: rem(16);
+    font-weight: $medium;
+    letter-spacing: 0.04em;
+}
+
+.recommendation__review-source{
+    color: $black;
+    display: flex;
+    justify-content: center;
+    font-size: rem(9.54);
+    font-weight: $regular;
+    line-height: calc(26/9.54);
+    @include mq(md) {
+        margin-top: rem(14);
+        font-size: rem(12);
+        line-height: calc(18/12);
+    }
+}
+
+.recommendation__review-source-text{
+    text-decoration: underline;
+}
+
+.recommendation__review-source-text a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+
+.recommendation__table{
+    margin-top: rem(98);
+    background-color: #D2DFEB;
+    padding: rem(63) rem(100) rem(63) rem(34) ;
+}

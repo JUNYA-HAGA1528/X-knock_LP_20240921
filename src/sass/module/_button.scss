@@ -14,6 +14,10 @@
     }
 }
 
+.button__link--margin + .button__link--margin{
+    margin-top: rem(0) !important;
+}
+
 .button__link--margin{
     margin-top: rem(0);
 }
@@ -219,4 +223,126 @@
     color: #7E4700;
     font-size: rem(16);
     font-weight: $semiBold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ボタン（recommendation）*/
+.recommendation__button  {
+    position: relative;
+    background: $silver;
+    color: #333;
+    width: rem(284);
+    height: rem(64);
+    font-size: rem(16);
+    line-height: calc(34.7/15.61);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    z-index: 1;
+    transition: 0.4s;
+    overflow: hidden;
+    border: solid 2px $white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    @include mq(md) {
+        width: rem(328);
+        height: rem(74);
+        line-height: calc(40/16);
+    }
+}
+
+.recommendation__button span::after {
+	background-image: none;
+
+}
+
+.recommendation__button:hover{
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+
+
+.recommendation__button-text{
+    background: $gold;    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: calc(40/16);
+    letter-spacing: 0.04em;
+
+}
+
+
+
+
+
+
+/*ボタン（recommendation）*/
+.recommendation__button-white  {
+    position: relative;
+    background: $white;
+    color: $blue;
+    width: rem(284);
+    height: rem(64);
+    font-size: rem(16);
+    line-height: calc(34.7/15.61);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    z-index: 1;
+    transition: 0.4s;
+    overflow: hidden;
+    border: solid 1px $blue;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    @include mq(md) {
+        width: rem(328);
+        height: rem(74);
+        line-height: calc(40/16);
+    }
+}
+
+.recommendation__button-white span::after {
+	background-image: none;
+
+}
+
+.recommendation__button-white:hover{
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    cursor: pointer;
 }
