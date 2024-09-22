@@ -1,14 +1,12 @@
+jQuery(document).ready(function ($) { 
+    $(window).on('scroll', function () {
+        var scrollTop = $(window).scrollTop();
+        var header = $('.header');
 
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 300) {
-            header.classList.add('scrolled');
+        if (scrollTop > 100) {
+            header.addClass('scrolled');
         } else {
-            header.classList.remove('scrolled');
+            header.removeClass('scrolled');
         }
     });
-    
-    
-
 });

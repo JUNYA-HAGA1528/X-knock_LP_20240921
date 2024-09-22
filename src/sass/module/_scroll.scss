@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.scroll__inner{
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 rem(25);
+    @include mq(md) {
+        max-width: rem(894);
+    }
+}
+
+.scroll__list{
+    background-color: $white;
+    margin-top: rem(-40);
+    padding: rem(24) rem(62) rem(29);
+    border-radius: rem(4);
+    display: flex;
+    align-items: center;
+    gap: 0 rem(39.15);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 100;
+}
+
+.scroll__area,
+.scroll__sell,
+.scroll__chart{
+    width: rem(213);
+    height: rem(213);
+}

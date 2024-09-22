@@ -1,27 +1,41 @@
 @use "global" as *;
 
 .mv{
-    padding: rem(126) 0 rem(87);
+    padding: rem(81) 0 rem(87);
     background-image: url('../images/common/mv-bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     overflow: hidden;
+    @include mq(md) {
+        padding: rem(126) 0 rem(87);
+    }
 }
 
 .mv__inner{
-    max-width: rem(1440);
+    max-width: $max-width;
     margin: 0 auto;
     position: relative;
+    @include mq(md) {
+        max-width: rem(1440);
+        margin: 0 auto;
+    }
 }
 
 .mv__man{
     position: absolute;
-    top: 10%;
-    left: -3%;
-    width: rem(356);
-    height: rem(685);
+    top: 29%;
+    left: -10%;
+    width: rem(211);
+    height: rem(410);
+    z-index: 10;
+    @include mq(md) {
+        top: 10%;
+        left: -3%;    
+        width: rem(356);
+        height: rem(685);
+    }
 }
 
 
@@ -31,14 +45,36 @@
 
 .mv__woman{
     position: absolute;
-    top: 10%;
-    right: -3%;
-    width: rem(314);
-    height: rem(664);
+    top: 29%;
+    right: -10%;
+    width: rem(191);
+    height: rem(406);
+    z-index: 10;
+    @include mq(md) {
+        top: 10%;
+        right: -3%;    
+        width: rem(314);
+        height: rem(664);
+    }
 }
 
 .mv__recommendation{
-    width: rem(808);
-    height: rem(157);
-    margin: rem(9) auto 0;
+    width: 100%;
+    height: rem(119);
+    margin: rem(20) auto 0;
+    @include mq(md) {
+        width: rem(808);
+        height: rem(157);
+        margin: rem(9) auto 0;
+    }
+}
+
+.mv__cash{
+    margin-top: rem(135);
+    position: relative;
+    z-index: 11;
+    @include mq(md) {
+        margin-top: rem(0);
+        z-index: 9;
+    }
 }
