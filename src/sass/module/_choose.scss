@@ -20,7 +20,7 @@
     text-transform: capitalize;
     color: rgba(21, 33, 55, 0.5); /* 半透明の文字色 */
     @include mq(md) {
-        margin-top: rem(8);
+        margin-top: rem(-10);
         font-size: rem(64);
         padding-right: rem(135);
         text-align: right;

@@ -6,9 +6,12 @@
     justify-content: space-between;
     flex: 1 1 auto;
     min-height: 100%;
-    padding: rem(18.95) rem(15.82) rem(14.21) rem(30);
+    padding: rem(17.92) rem(14.96) rem(13.44) rem(28.36);
     background-color: $indigo;
     position: relative;
+    @include mq(md) {
+        padding: rem(18.95) rem(15.82) rem(14.21) rem(30);
+    }
 }
 
 .footer-card__wrapper {
@@ -26,6 +29,9 @@
     display: flex;
     font-size: rem(13.88);
     padding-bottom: rem(5);
+    @include mq(md) {
+        font-size: rem(14.68);
+    }
 }
 
 .footer-card__list--font{
@@ -89,6 +95,9 @@
     -webkit-text-fill-color: transparent; /* テキストの塗りを透明にする（Webkit系ブラウザ用） */
     background-clip: text;            /* 背景をテキストのみに適用（標準ブラウザ用） */
     text-fill-color: transparent;     /* テキストの塗りを透明にする（標準ブラウザ用） */
+    
+    font-weight: $regular;
+    letter-spacing: 0.01em;
     @include mq(md) {
         font-size: rem(13.05);
     }

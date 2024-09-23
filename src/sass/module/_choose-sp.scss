@@ -95,11 +95,15 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    font-size: rem(24);
+    font-size: rem(18);
     font-weight: 900;
     position: relative;
     display: inline-block;
     text-transform: capitalize;
+    @include mq(md) {
+        font-size: rem(24);
+
+    }
 }
 
 .choose-sp__topic-head::before,
@@ -113,11 +117,18 @@
 }
 
 .choose-sp__topic-head::before {
-    left: 151%;
+    left: 191%;
+    @include mq(md) {
+        left: 151%;
+    }
 }
 
 .choose-sp__topic-head::after {
-    right: 162%;
+    right: 191%;
+    @include mq(md) {
+        right: 162%;
+
+    }
 }
 
 .choose-sp__topic-title{

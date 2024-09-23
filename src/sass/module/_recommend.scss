@@ -33,23 +33,20 @@
 }
 
 .recommend__topic{
-    margin-top: rem(87.82);
+    margin-top: rem(77);
     @include mq(md) {
         margin-top: rem(100);
     }
 }
 
 .recommend__choose{
-    margin-top: rem(100);
-    @include mq(md) {
-        margin-top: rem(151);
-    }
+    margin-top: rem(120);
 }
 
 .recommend__recommendation{
     margin-top: rem(80);
     @include mq(md) {
-        margin-top: rem(113);
+        margin-top: rem(120);
     }
 }
 

@@ -19,7 +19,7 @@
 }
 
 .case__subtitle{
-    margin-top: rem(37);
+    margin-top: rem(20);
     text-align: left;
     font-family: $second-font-family;
     font-size: rem(48);
@@ -35,7 +35,10 @@
 }
 
 .case__list{
-    margin-top: rem(71);
+    margin-top: rem(65);
+    @include mq(md) {
+        margin-top: rem(71);
+    }
 }
 
 .case__item{
@@ -48,7 +51,10 @@
 }
 
 .case__item + .case__item{
-    margin-top: rem(95);
+    margin-top: rem(82);
+    @include mq(md) {
+        margin-top: rem(95);
+    }
 }
 
 .case__wrapper{
@@ -216,6 +222,13 @@
         margin-top: rem(0);
         padding: rem(110) rem(120) rem(60);
     }
+}
+
+.case__sentence--third{
+    @include mq(md) {
+        margin-top: rem(0);
+        padding: rem(110) rem(115) rem(60);
+    } 
 }
 
 .case__text{

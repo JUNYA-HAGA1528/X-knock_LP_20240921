@@ -125,6 +125,7 @@
     transition: 0.4s;
     overflow: hidden;
     border: solid 2px $white;
+    padding: 0;
     @include mq(md) {
         width: rem(413);
         height: rem(65);
@@ -179,7 +180,7 @@
     height: rem(65);
     font-size: rem(18);
     line-height: calc(34.7/18);
-    font-weight: $semiBold;
+    font-weight: $semiBold !important;
     letter-spacing: 0.04em;
     padding-right: rem(0);
     z-index: 1;
@@ -300,7 +301,7 @@
     background-clip: text;
     text-fill-color: transparent;
     font-size: rem(16);
-    font-weight: 900;
+    font-weight: 900 !important;
     line-height: calc(40/16);
     letter-spacing: 0.04em;
     @include mq(md) {

@@ -28,3 +28,11 @@
     width: rem(213);
     height: rem(213);
 }
+
+.scroll-pc__item {
+	transition: all 0.6s ease 0s;
+}
+.scroll-pc__item:hover {
+	cursor: pointer;
+	transform: scale(1.1, 1.1);
+}
