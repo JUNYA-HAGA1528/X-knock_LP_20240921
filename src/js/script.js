@@ -31,4 +31,23 @@ jQuery(document).ready(function ($) {
             }
         });
     });
+
+
+    jQuery(document).ready(function($) {
+        // スクロールイベントを監視
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() > 100) { // スクロールが100pxを超えたら表示
+                $('.arrow-wrapper').fadeIn();
+            } else {
+                $('.arrow-wrapper').fadeOut();
+            }
+        });
+    
+        // ボタンをクリックしたときにページトップに戻る
+        $('.arrow-wrapper').on('click', function() {
+            $('html, body').animate({ scrollTop: 0 }, 500); // スムーズにスクロール
+        });
+    });
+    
+    
 });

@@ -36,3 +36,45 @@
         margin-top: rem(75.79);
     }
 }
+
+
+
+
+
+
+// .arrow-wrapper {
+//     position: fixed;
+//     bottom: 30px;
+//     right: 30px;
+//     z-index: 1000;
+//     cursor: pointer;
+//     display: none; /* 初期状態は非表示 */
+// }
+
+
+// .arrow {
+//     width: 60px; /* 矢印の背景円のサイズ */
+//     height: 60px;
+//     border-radius: 50%;
+//     background: $blue-gradation;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .arrow::before {
+//     content: "";
+//     display: block;
+//     width: 0;
+//     height: 0;
+//     border-style: solid;
+// }
+
+// /* 上向きの矢印 */
+// .arrow.-top::before {
+//     border-right: 10px solid transparent;
+//     border-left: 10px solid transparent;
+//     border-bottom: 20px solid #fff;
+//     border-top: 0;
+//     transform: translateY(-1px);
+// }
