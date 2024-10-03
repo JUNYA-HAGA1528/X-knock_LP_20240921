@@ -124,42 +124,6 @@
     }
 }
 
-.trust__table{
-    max-width: $max-width;
-    margin: auto;
-    padding: 0 rem(25);
-    @include mq(md) {
-        max-width: rem(1230);
-    }
-}
-
-.trust__table-wrapper {
-    overflow-x: scroll;
-    width: calc(100% + rem(25));  // 右側のパディングのみ補正
-    margin: rem(60.56) auto auto 0; // 左側のパディングはそのまま
-    @include mq(md) {
-        width: 100%;
-        margin: rem(80) auto auto auto;
-    }
-}
-
-.trust__table-img {
-    width: rem(772);
-    height: rem(675);
-    @include mq(md) {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -170,3 +134,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+
+
+
+

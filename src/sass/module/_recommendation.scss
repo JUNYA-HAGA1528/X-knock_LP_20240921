@@ -434,3 +434,212 @@
         width: 100%;
     }
 }
+
+
+
+
+
+.recommendation__review-text--third {
+    height: rem(433);
+    display: flex; /* Flexboxを使用 */
+    align-items: center; /* 縦方向中央揃え */
+    justify-content: center; /* 横方向中央揃え */
+    text-align: center; /* テキストが複数行の場合、中央揃え */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.company-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D2DFEB;
+    padding: rem(63) rem(20);
+    margin-top: rem(50);
+}
+
+.company-overview__left {
+    background-color: #A3BFD3;
+    padding: 40px 20px;
+    text-align: center;
+    color: #0D2D5D;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vertical-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.english {
+    font-family: $second-font-family;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: rem(48); /* Adjust as needed */
+    color: $indigo; /* Adjust color if necessary */
+    font-weight: $regular
+}
+
+.japanese {
+    writing-mode: vertical-rl;
+    font-size: rem(24); /* Adjust as needed */
+    color: $black; /* Adjust as needed */
+    font-weight: 900;
+    letter-spacing: 0.4em;
+}
+
+
+.company-overview__right {
+    background-color: #fff;
+    padding: rem(16);
+    margin-left: rem(42);
+    width: 70%;
+}
+
+.company-overview__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.company-overview__table th, 
+.company-overview__table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px dashed #22547D; /* 通常のボーダー */
+}
+
+.company-overview__table th {
+    font-weight: bold;
+    color: #0D2D5D;
+    width: 150px;
+    border-right: 1px dashed #22547D; /* 右側の線 */
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(28/16);
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.company-overview__table td {
+    padding-left: 20px; /* th と td の間に余白 */
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: 1.25;
+    letter-spacing: 0.07em;
+}
+
+.company-overview__table-bold{
+    font-weight: $bold !important;
+}
+
+.company-overview__table-font{
+    font-size: rem(12);
+}
+
+/* 最後の行の下線を削除 */
+.company-overview__table tr:last-child th,
+.company-overview__table tr:last-child td {
+    border-bottom: none;
+}
+
+.company-overview__table td a {
+    color: #0D2D5D;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.company-overview-sp{
+    display: flex;
+    gap: 0 rem(16);
+    background-color: #D2DFEB;
+    width: calc(100% + rem(50));
+    margin: rem(20) auto auto rem(-25);
+    padding:rem(40) rem(24) rem(40) rem(15) ;
+}
+
+.vertical-text-sp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.english-sp {
+    font-family: $second-font-family;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: rem(36); /* Adjust as needed */
+    color: $indigo; /* Adjust color if necessary */
+    font-weight: $regular;
+    letter-spacing: 0.04em;
+}
+
+.japanese-sp {
+    writing-mode: vertical-rl;
+    font-size: rem(20.3); /* Adjust as needed */
+    color: $black; /* Adjust as needed */
+    font-weight: 900;
+    letter-spacing: 0.4em;
+}
+
+.company-overview__list{
+    background-color: $white;
+    padding: rem(40) rem(25);
+    width: 74.5%;
+}
+
+.company-overview__item span {
+    font-size: rem(14);
+}
+
+.company-overview__item dt {
+    font-size: rem(16);
+    color: $blue;
+    font-weight: $bold;
+    letter-spacing: 0.01em;
+    border-bottom: dashed 1px $indigo ;
+    padding-bottom: rem(9);
+}
+
+.company-overview__item + .company-overview__item{
+    margin-top: rem(20);
+}
+
+.company-overview__item dd {
+    margin-top: rem(15);
+    font-size: rem(16);
+    font-weight: $medium;
+    letter-spacing: 0.04em;
+}
+
+.padding{
+    width: calc(100% + rem(50));
+    margin: rem(20) auto auto rem(-25);
+}

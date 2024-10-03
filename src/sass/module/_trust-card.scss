@@ -22,9 +22,12 @@
 
 .trust-card__title{
     position: absolute;
-    top: 13%;
+    top: 7%;
     left: 0;
     right: 0;
+    @include mq(md) {
+        top: 8.5%;
+    }
 }
 
 .trust-card__company{
@@ -32,7 +35,10 @@
     width: 98.7%;
 }
 
-
+.trust-card__company a:hover {
+    transition: 0.3s;
+    opacity: 0.7;
+}
 
 
 
@@ -67,6 +73,7 @@
     padding: 0 rem(13.88);
     @include mq(md) {
         margin-top: rem(10);
+        padding: 0 rem(17);
     }
 }
 
@@ -124,3 +131,93 @@
         line-height: calc(32/16);
     }
 }
+
+
+
+
+
+
+.trust-card__dl{
+    text-align: left;
+    padding: 0 rem(13.88);
+    margin-top: rem(20);
+    @include mq(md) {
+        padding: 0 rem(17);
+    }
+}
+
+.trust-card__box-item + .trust-card__box-item{
+    margin-top: rem(10);
+}
+
+.trust-card__box-item{
+    display: flex;
+    height: rem(84);
+}
+
+.trust-card__box-item--height{
+    height: rem(160);
+}
+
+.trust-card__box-item dt {
+    width: 47%;
+    background-color: $indigo;
+    color: $white;
+    font-size: rem(15);
+    font-weight: $bold;
+    letter-spacing: 0.04em;
+    padding-left: rem(10);
+    display: flex; /* Flexboxを有効にする */
+    align-items: center; /* 縦方向の中央揃え */
+    @include mq(md) {
+        font-size: rem(15);
+        padding-left: rem(20);
+    }
+}
+
+
+
+.trust-card__box-item dd {
+    width: 70%;
+    background-color: $white;
+    color: $indigo;
+    font-weight: 900;
+    letter-spacing: 0.04rem;
+    display: flex;
+    align-items: center;
+    padding-left: rem(10) !important;
+    @media screen {
+        font-size: rem(15);
+        padding-left: rem(27);
+    }
+}
+
+.trust-card__box-item--font dd {
+    font-size: rem(18);
+    letter-spacing: 0.04em;
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+
+.trust-div{
+    
+}
+
+.trust-div__p + .trust-div__p{
+    margin-top: rem(13);
+    line-height: 1.2;
+}
+
+.color{
+    color: #DBAB00 !important;
+}
+
+.trust-div__p--color{
+    color: #DBAB00;
+    font-size: rem(15);
+    @include mq(md) {
+        font-size: rem(16);
+    }
+}
+
